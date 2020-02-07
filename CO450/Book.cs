@@ -12,7 +12,7 @@ namespace CO450
     /// For Tasks 4.2 and 4.3 
     /// 
     /// Author      : Dr Derek Peacock
-    /// Modified by : Student Name
+    /// Modified by : Godfrey
     /// </summary>
     public class Book
     {
@@ -21,6 +21,24 @@ namespace CO450
         private string author, name, town;
         private string animal, weapon, job;
         private string gender, day, emotion;
+
+        /// <summary>
+        /// This method is a contructer for the book class, if the
+        /// use does not want a customized story, the default values
+        /// are loaded from here
+        /// </summary>
+        public Book()
+        {
+            author = "Godfrey";
+            name = "Dave";
+            town = "Lewisham";
+            animal = "cow";
+            weapon = "knife";
+            job = "farmer";
+            gender = "male";
+            day = "wednesday";
+            emotion= "terrified";
+        }
 
         /// <summary>
         /// Prompt the user for an answer as a string and return it
@@ -35,6 +53,7 @@ namespace CO450
             return answer;
         }
 
+     
         /// <summary>
         /// Get the details of the author, name, town, animal
         /// job and weapon used in the books stories
@@ -71,24 +90,31 @@ namespace CO450
 
             Console.WriteLine("In the shadow of a doorway, a demented " + job
                 + " waited, clutching a menacing " + weapon);
-
-           
         }
 
+
+        /// <summary>
+        /// This method creates the second chapter of a story using
+        /// three new additional attributes of the book class
+        /// </summary>
         public void WriteChapter2()
         {
-            //Console.Clear();
+         
 
             Console.WriteLine("A Horror Story : Chapter 2");
             Console.WriteLine("===============================");
 
             Console.WriteLine( "The " + job + " darted towards " + name + ".");
-            Console.WriteLine(gender + " felt " + emotion);
-            Console.WriteLine("This was not how " + gender +  " expected to end " 
+            Console.WriteLine(gender + " began to feel " + emotion + ".");
+            Console.WriteLine("This was not how " + name +  " expected to end " 
                 + day + " night.");
 
         }
 
+        /// <summary>
+        /// This methods checks the gender of the custom character, to create
+        /// a personalized story
+        /// </summary>
         public void checkGender()
         {
             if (gender=="male" || gender=="Male" || gender=="MALE" || gender=="M" || gender=="m")

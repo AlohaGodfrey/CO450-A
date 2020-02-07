@@ -9,17 +9,32 @@ namespace CO450
     class Program
     {
 
-        static void Main(string[] args)
+        static void Main()
         {
-            //TestDistanceConverter();
+            TestDistanceConverter();
             TestBook();
         }
 
         private static void TestBook()
+        /// <summary>
+        /// Task 4.2 and 4.3
+        /// Create a customizable story
+        /// </summary>
         {
+            string input;
             Book book = new Book();
 
-            book.GetDetails();
+            Console.Clear();
+            Console.Write("Do you want start a customizable story? (Y/N): ");
+            input = Console.ReadLine();
+
+
+
+            if (input == "y" || input == "Y")
+            {
+                book.GetDetails();
+            }
+
             book.checkGender();
             book.WriteChapter1();
             Console.ReadLine();
@@ -27,7 +42,12 @@ namespace CO450
             Console.ReadLine();
         }
 
-        static void Main1(string[] args)
+        static void TestDistanceConverter()
+        /// <summary>
+        /// Task 4.1
+        /// Test that the DistanceConverter can accurately convert
+        /// any number of miles into feet and vice versa
+        /// </summary>
         {
             int miles, feet, choice;
             string input;
