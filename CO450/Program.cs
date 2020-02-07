@@ -8,7 +8,26 @@ namespace CO450
 {
     class Program
     {
+
         static void Main(string[] args)
+        {
+            //TestDistanceConverter();
+            TestBook();
+        }
+
+        private static void TestBook()
+        {
+            Book book = new Book();
+
+            book.GetDetails();
+            book.checkGender();
+            book.WriteChapter1();
+            Console.ReadLine();
+            book.WriteChapter2();
+            Console.ReadLine();
+        }
+
+        static void Main1(string[] args)
         {
             int miles, feet, choice;
             string input;
@@ -50,7 +69,10 @@ namespace CO450
             } while (choice != 3);
 
             Console.ReadLine();
-           
+
+
+
+            
         }
     }
 }
