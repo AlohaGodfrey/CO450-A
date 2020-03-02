@@ -4,9 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CO450
+namespace CO453A
 {
     class DistanceConverter
+    /// <summary>
+    /// Task 4.1
+    /// Test that the DistanceConverter can accurately convert
+    /// any number of miles into feet and vice versa
+    /// 
+    /// author: Immanuel Godfrey
+    /// </summary>
     {
         public int toFeet(int miles)
         {

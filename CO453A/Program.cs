@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CO453A.Bubble;
 
-namespace CO450
+
+namespace CO453A
 {
    
     class Program
@@ -12,12 +14,54 @@ namespace CO450
 
         static void Main()
         {
-            //TestDistanceConverter();    //T4.1  
-            //TestBook();                 //T4.2 and T4.3
-            //TestBMI();                  //T4.4  
+            //TestDistanceConverter();    // T4.1  
+            //TestBook();                 // T4.2 and T4.3
+            //TestBMI();                  // T4.4  
+
+
+            //TestTournament();           // T5.1 and 5.3
+            //TestSongs();                // T5.2
+            //TestBubbleSort();           // T5.4 
+            //TestMotelBooking();         // T5.6
         }
 
+        private static void TestBubbleSort()
+        {
+           Bubble sort1 = new Bubble();
+    
+           sort1.inputNumbers();
+           sort1.display();
+        }
 
+       
+
+        private static void TestSongs()
+        {
+            MP3Chart chart = new MP3Chart();
+
+            chart.ShowSongs();
+
+            bool finish = false;
+
+            while (!finish)
+            {
+                int songNo = chart.GetVotes();
+                if (songNo == 0) finish = true;
+
+            }
+
+            chart.ShowVotes();
+        }
+
+       
+        private static void TestTournament()
+        {
+            Tournament tournament = new Tournament();
+
+            tournament.GetDetails();
+
+            tournament.ShowDetails();
+        }
 
         private static void TestBMI()
         {
@@ -60,12 +104,7 @@ namespace CO450
             Console.ReadLine();
         }
 
-        static void TestDistanceConverter()
-        /// <summary>
-        /// Task 4.1
-        /// Test that the DistanceConverter can accurately convert
-        /// any number of miles into feet and vice versa
-        /// </summary>
+        public static void TestDistanceConverter()
         {
             int miles, feet, choice;
             string input;
