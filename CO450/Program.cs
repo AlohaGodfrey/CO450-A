@@ -6,13 +6,31 @@ using System.Threading.Tasks;
 
 namespace CO450
 {
+   
     class Program
     {
 
         static void Main()
         {
-            TestDistanceConverter();
-            TestBook();
+            //TestDistanceConverter();    //T4.1  
+            //TestBook();                 //T4.2 and T4.3
+            //TestBMI();                  //T4.4  
+        }
+
+
+
+        private static void TestBMI()
+        {
+            BodyMassIndex Patient1 = new BodyMassIndex();
+            
+            Patient1.displayMenu();
+            Patient1.getMenuChoice();
+            Patient1.getDetails();
+            Patient1.calcBMI();
+            Patient1.displayResults();
+
+            Console.ReadLine();
+
         }
 
         private static void TestBook()
